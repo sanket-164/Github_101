@@ -16,18 +16,6 @@ git config --global user.name
 git config --global user.email
 ```
 
-## Check Status
-See the current state of your Git repository:
-```bash
-git status
-```
-
-## Initialize a Repository
-Create a new Git repository:
-```bash
-git init
-```
-
 ## Create a Basic HTML File
 Create an `index.html` file with the following content:
 ```html
@@ -40,6 +28,18 @@ Create an `index.html` file with the following content:
     <h1>Hello, World!</h1>
 </body>
 </html>
+```
+
+## Check Status
+See the current state of your Git repository:
+```bash
+git status
+```
+
+## Initialize a Repository
+Create a new Git repository:
+```bash
+git init
 ```
 
 ## Check Status Again
