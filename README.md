@@ -1,10 +1,19 @@
-# Git & GitHub Basics with Bash
+# Github 101
 
 ## Configure Git
 Set your username and email for Git commits:
 ```bash
 git config --global user.name "Your Name"
+```
+```bash
 git config --global user.email "your.email@example.com"
+```
+Get your username and email:
+```bash
+git config --global user.name
+```
+```bash
+git config --global user.email
 ```
 
 ## Check Status
