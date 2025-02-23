@@ -54,6 +54,11 @@ Add files to the staging area:
 git add index.html
 ```
 
+If you want to add all untracked files to the staging area at once:
+```bash
+git add .
+```
+
 ## Commit Changes
 Save changes in the local repository:
 ```bash
@@ -64,11 +69,6 @@ git commit -m "Initial commit"
 Git follows this workflow:
 - Working Directory → Staging Area → Repository → Remote Repository
 
-## View Commit History
-Check the commit logs:
-```bash
-git log
-```
 
 ## Add Remote Repository
 Connect the local repository to a remote GitHub repository:
@@ -98,19 +98,6 @@ git clone https://github.com/yourusername/repository.git
 After cloning, check the repository status:
 ```bash
 git status
-```
-
-## Stage and Commit Changes
-Add and commit changes before pushing:
-```bash
-git add .
-git commit -m "Updated files"
-```
-
-## Push to Remote Repository
-Send committed changes to GitHub:
-```bash
-git push origin main
 ```
 
 ## View Commit History Again
