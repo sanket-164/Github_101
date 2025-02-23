@@ -1,148 +1,174 @@
 # Git & GitHub Basics with Bash
 
-## Checking Status
-Use the following command to check the status of your repository:
+## Configure Git
+Set your username and email for Git commits:
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+## Check Status
+See the current state of your Git repository:
 ```bash
 git status
 ```
 
-## Initializing a Repository
-To start tracking a project with Git, initialize a new repository:
+## Initialize a Repository
+Create a new Git repository:
 ```bash
 git init
 ```
 
-## Checking Status Again
-After initializing, check the status again to see the current state:
+## Create a Basic HTML File
+Create an `index.html` file with the following content:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
+```
+
+## Check Status Again
+Verify the repository status after adding the new file:
 ```bash
 git status
 ```
 
-## Adding Files to Staging Area
-To stage changes for commit:
+## Stage Files
+Add files to the staging area:
 ```bash
-git add <file>
-```
-To add all changes:
-```bash
-git add .
+git add index.html
 ```
 
-## Committing Changes
-To save the staged changes:
+## Commit Changes
+Save changes in the local repository:
 ```bash
-git commit -m "Commit message"
+git commit -m "Initial commit"
 ```
 
-## Understanding Git Workflow
-Git follows a simple workflow:
-- Working Directory (where files are modified)
-- Staging Area (where changes are added before commit)
-- Local Repository (where committed changes are stored)
-- Remote Repository (where changes are pushed to GitHub)
+## Understand Git Workflow
+Git follows this workflow:
+- Working Directory → Staging Area → Repository → Remote Repository
 
-## Viewing Commit History
-To see the commit history:
+## View Commit History
+Check the commit logs:
 ```bash
 git log
 ```
 
-## Adding Remote Repository
-To link your local repository to a remote repository:
+## Add Remote Repository
+Connect the local repository to a remote GitHub repository:
 ```bash
-git remote add origin <repository-url>
+git remote add origin https://github.com/yourusername/repository.git
 ```
 
-## Pushing Changes to Remote Repository
-To upload your commits to GitHub:
+## Push to Remote Repository
+Upload local commits to GitHub:
 ```bash
-git push origin main
+git push -u origin main
 ```
 
-## Pulling Latest Changes from Remote
-If changes were made on GitHub, pull them into your local repository:
+## Pull Changes from Remote
+After making changes on GitHub, update the local repository:
 ```bash
 git pull origin main
 ```
 
-## Cloning a Repository
-To create a local copy of an existing repository:
+## Clone a Repository
+Copy an existing GitHub repository to your local machine:
 ```bash
-git clone <repository-url>
+git clone https://github.com/yourusername/repository.git
 ```
 
-## Status, Add, Commit, and Push to Remote
-After making changes, follow these steps:
+## Check Status Again
+After cloning, check the repository status:
 ```bash
 git status
+```
+
+## Stage and Commit Changes
+Add and commit changes before pushing:
+```bash
 git add .
 git commit -m "Updated files"
+```
+
+## Push to Remote Repository
+Send committed changes to GitHub:
+```bash
 git push origin main
 ```
 
-## Viewing Commit History Again
-To check the commit history:
+## View Commit History Again
+Check commit logs after pushing:
 ```bash
 git log
 ```
 
-## Undoing Changes
-To unstage files before committing:
+## Undo Changes Before Commit
+Unstage changes but keep them in the working directory:
 ```bash
-git reset <file>
+git reset
 ```
 
-## Undoing Last Commit but Keeping Changes Staged
+## Undo Commit and Keep Changes Staged
+Undo last commit while keeping changes in the staging area:
 ```bash
 git reset --soft HEAD~1
 ```
 
-## Undoing Last Commit and Removing Changes
+## Undo Commit and Remove All Changes
+Undo last commit and discard all changes:
 ```bash
 git reset --hard HEAD~1
 ```
 
----
-
-# Extra: Working with Branches
-
-## Creating a New Branch
+## Extra: Working with Branches
+### Create a New Branch
 ```bash
-git branch <branch-name>
+git branch new-feature
 ```
 
-## Listing All Branches
+### List All Branches
 ```bash
 git branch
 ```
 
-## Switching to a New Branch
+### Switch to the New Branch
 ```bash
-git checkout <branch-name>
+git checkout new-feature
 ```
 
-## Changing Files in a New Branch and Committing
-After switching to the new branch, make changes and commit them:
+### Make Changes and Commit in the New Branch
+Modify a file, then stage and commit:
 ```bash
 git add .
-git commit -m "Changes in new branch"
+git commit -m "Changes in new feature branch"
 ```
 
-## Switching Back to Main Branch
+### Switch Back to Main Branch
 ```bash
 git checkout main
 ```
 
-## Merging a Branch into Main
+### Merge Branch into Main
 ```bash
-git merge <branch-name>
+git merge new-feature
 ```
 
-## Deleting a Branch
+### Delete the Merged Branch
 ```bash
-git branch -d <branch-name>
+git branch -d new-feature
 ```
 
-## Creating and Switching to a New Branch in One Step
+### Create and Switch to a New Branch in One Command
 ```bash
-git checkout -b <branch-name>
+git checkout -b another-feature
+```
+
+This guide provides the essential Git commands for beginners using Git and GitHub with Bash.
